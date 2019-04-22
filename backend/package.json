@@ -1,0 +1,53 @@
+{
+  "name": "willhaben-crawler",
+  "version": "1.0.0",
+  "description": "Simple Headless Web-Crawler for the website willhaben.at. Only used for private purposes, nothing commerical!",
+  "main": "./server/index.ts",
+  "scripts": {
+    "start": "ts-node ./server/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startCrawler": "ts-node --transpile-only ./crawler/crawler.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunilson/willhaben-crawler.git"
+  },
+  "author": "Linus Weiss",
+  "license": "MIT",
+  "homepage": "https://github.com/sunilson/willhaben-crawler#readme",
+  "dependencies": {
+    "@types/cheerio": "^0.22.11",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "@types/jsonfile": "^5.0.0",
+    "@types/mailgun-js": "^0.16.3",
+    "@types/node-cron": "^2.0.1",
+    "@types/node-fetch": "^2.3.0",
+    "@types/puppeteer": "^1.12.3",
+    "@types/request-promise": "^4.1.42",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "firebase-admin": "^7.1.1",
+    "jsonfile": "^5.0.0",
+    "mailgun-js": "^0.22.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.3.0",
+    "puppeteer": "^1.13.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "useTabs": false,
+    "printWidth": 120,
+    "tabWidth": 2,
+    "bracketSpacing": false,
+    "jsxBracketSameLine": true,
+    "eslintIntegration": true,
+    "trailingComma": "es5"
+  }
+}
