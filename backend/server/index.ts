@@ -2,6 +2,7 @@ import express, {NextFunction, Response, Request} from 'express';
 import cors from 'cors';
 import crawlers from './routes/crawlers';
 import admin from 'firebase-admin';
+require('dotenv').config();
 
 admin.initializeApp({
   credential: admin.credential.cert(require('../serviceAccountKey.json')),
