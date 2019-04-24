@@ -1,8 +1,8 @@
+require('dotenv').config();
 import express, {NextFunction, Response, Request} from 'express';
 import cors from 'cors';
 import crawlers from './routes/crawlers';
 import admin from 'firebase-admin';
-require('dotenv').config();
 
 admin.initializeApp({
   credential: admin.credential.cert(require('../serviceAccountKey.json')),
@@ -33,6 +33,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 //Start everything
-app.listen(process.env.PORT || 4000, () => {
+app.listen(process.env.PORT || 3333, () => {
   console.log('Server running.');
 });

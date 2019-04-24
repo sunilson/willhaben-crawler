@@ -21,7 +21,7 @@ const QueryRow: React.FunctionComponent<QueryProps> = ({query, onDeleteClicked, 
       <HigherTableCell>{query.keyword}</HigherTableCell>
       <HigherTableCell>{query.refreshRate}</HigherTableCell>
       <HigherTableCell>
-        <Checkbox checked={query.shippingRequired | false} onChange={() => {}} />
+        <Checkbox checked={query.shippingRequired || false} onChange={() => {}} />
       </HigherTableCell>
       <HigherTableCell>{query.minPrice ? query.minPrice.toString() : 'n.A.'} €</HigherTableCell>
       <HigherTableCell>{query.maxPrice ? query.maxPrice.toString() : 'n.A.'} €</HigherTableCell>

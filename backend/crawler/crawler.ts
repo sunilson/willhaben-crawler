@@ -23,10 +23,10 @@ async function extractData(page: Page, query: SearchQuery) {
 
   if (!query.category) {
     url = `https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz${query.shippingRequired &&
-      '/a/uebergabe-versand-2537'}?rows=15&keyword=${query.keyword}`;
+      '/a/uebergabe-versand-2537'}?rows=25&keyword=${query.keyword}`;
   } else {
     url = `https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz/${query.category}${query.shippingRequired &&
-      '/a/uebergabe-versand-2537'}?rows=15&keyword=${query.keyword}`;
+      '/a/uebergabe-versand-2537'}?rows=25&keyword=${query.keyword}`;
   }
 
   if (query.minPrice || query.maxPrice) {
