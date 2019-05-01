@@ -44,9 +44,9 @@ router.get('/runFast', async (req: Request, res: Response, next: NextFunction) =
     await runSimpleCrawler(await getQueries());
   } catch (e) {
     console.log(e);
-    res.sendStatus(400);
+    return res.sendStatus(400);
   }
-  res.sendStatus(200);
+  return res.sendStatus(200);
 });
 
 /**
@@ -57,9 +57,9 @@ router.get('/run', async (req: Request, res: Response, next: NextFunction) => {
     await startRun(await getQueries());
   } catch (e) {
     console.log(e);
-    res.sendStatus(400);
+    return res.sendStatus(400);
   }
-  res.sendStatus(200);
+  return res.sendStatus(200);
 });
 
 /**
