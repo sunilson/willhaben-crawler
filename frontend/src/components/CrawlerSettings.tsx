@@ -10,7 +10,7 @@ const CrawlerSettings: React.FunctionComponent = () => {
   const runCrawlers = async () => {
     try {
       setRunning(true);
-      await axios.get(`https://willhaben-crawler.herokuapp.com/crawler/run`);
+      await axios.get(`http://sunilson.hopto.org:3333/crawler/run`);
       setRunning(false);
     } catch (e) {
       setError(e.message);
